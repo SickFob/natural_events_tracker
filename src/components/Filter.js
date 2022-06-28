@@ -1,11 +1,8 @@
-import React, { useState, useEffect } from 'react'
+import { useState } from 'react'
 
 const Filter = ({ handleFiltersChange }) => {
 
-  const [filters, setFilters] = useState([
-    {id: 'wildfires', label: 'Wild fires', isChecked: true}, 
-    {id: 'severeStorms', label: 'Severe storms', isChecked: true}
-  ])
+  const [filters, setFilters] = useState([{id: 'wildfires', label: 'Wild fires', isChecked: true}, {id: 'severeStorms', label: 'Severe storms', isChecked: true}])
 
   const checkBoxChange = ({ target : { name, checked } }) => {
     let newCheckBoxes = [...filters]
